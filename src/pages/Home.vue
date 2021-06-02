@@ -1,110 +1,7 @@
 <template>
   <!-- page -->
   <div id="page" class="hfeed site">
-
-    <!-- header -->
-    <header id="masthead" class="site-header" role="banner">
-
-      <!-- site-navigation -->
-      <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-
-        <a class="menu-toggle"><span class="lines"></span></a>
-
-        <!-- nav-menu -->
-        <div class="nav-menu">
-          <ul>
-            <li><a href="index-2.html">Home</a>
-              <!-- level 2 -->
-              <ul>
-                <li><a href="home-alt.html">Home Alternate</a></li>
-                <li><a href="blog-masonry.html">Blog Masonry</a></li>
-                <li><a href="blog-simple.html">Blog Simple</a></li>
-                <li><a href="blog-regular-with-sidebar.html">Blog Regular Sidebar</a></li>
-                <li><a href="blog-masonry-with-sidebar.html">Blog Masonry Sidebar</a></li>
-              </ul>
-              <!-- level 2 -->
-            </li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="books.html">Books</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="about.html">About Me</a>
-              <!-- level 2 -->
-              <ul>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="typo.html">Typography</a></li>
-                <li><a href="shortcodes.html">Shortcodes</a></li>
-                <li><a href="archives.html">Archives</a></li>
-                <li><a href="404.html">404</a></li>
-                <li><a href="grid.html">Grid</a></li>
-                <li><a href="form-elements.html">Forms</a>
-                  <!-- level 3 -->
-                  <ul>
-                    <li><a href="grid.html">Grid</a></li>
-                    <li><a href="form-elements.html">Forms</a></li>
-                  </ul>
-                  <!-- level 3 -->
-                </li>
-              </ul>
-              <!-- level 2 -->
-            </li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <!-- nav-menu -->
-
-        <a class="search-toggle toggle-link"></a>
-
-        <!-- search-container -->
-        <div class="search-container">
-
-          <div class="search-box">
-            <form role="search" method="get" class="search-form" action="#">
-              <label>Search for
-                <input type="search" id="search-field" placeholder="type and hit enter" name="s">
-              </label>
-              <input type="submit" class="search-submit" value="Search">
-            </form>
-          </div>
-
-        </div>
-        <!-- search-container -->
-
-        <!-- social-container -->
-        <div class="social-container">
-
-          <ul class="social">
-            <li><a class="facebook" href="#"></a></li>
-            <li><a class="twitter" href="#"></a></li>
-            <li><a class="vine" href="#"></a></li>
-            <li><a class="dribbble" href="#"></a></li>
-            <li><a class="instagram" href="#"></a></li>
-          </ul>
-
-        </div>
-        <!-- social-container -->
-
-      </nav>
-      <!-- site-navigation -->
-
-      <!-- site-title -->
-      <h1 class="site-title">
-        <a href="index-2.html" rel="home">
-          <img src="../assets/images/site/logo.png" alt="logo">
-          <!--EDITOR-->
-        </a>
-      </h1>
-      <!-- site-title -->
-
-      <!--<h1 class="site-title">
-        <a href="../index.html" rel="home">
-              EDITOR
-          </a>
-      </h1>
-      <p class="site-description">just another minimalist theme.</p>-->
-
-    </header>
-    <!-- header -->
-
+    <Header/>
     <!-- site-main -->
     <div id="main" class="site-main">
 
@@ -833,88 +730,7 @@
 
     </div>
     <!-- site-main -->
-
-    <!-- site-footer -->
-    <footer id="colophon" class="site-footer" role="contentinfo">
-
-      <!-- layout-medium -->
-      <div class="layout-medium">
-
-        <!-- footer-social -->
-        <div class="footer-social">
-
-          <ul class="social">
-            <li><a class="facebook" href="https://www.facebook.com/ictduc"></a></li>
-            <li><a class="twitter" href="https://twitter.com/nguyenducvn92"></a></li>
-<!--            <li><a class="google-plus" href="#"></a></li>-->
-<!--            <li><a class="dribbble" href="#"></a></li>-->
-            <li><a class="instagram" href="https://www.instagram.com/nguyenduc12/"></a></li>
-            <li><a class="soundcloud" href="#"></a></li>
-            <li><a class="pinterest" href="https://www.pinterest.com/ictduc"></a></li>
-          </ul>
-
-        </div>
-        <!-- footer-social -->
-
-        <!-- footer-sidebar -->
-        <div class="footer-sidebar widget-area" role="complementary">
-
-          <!-- widget -->
-          <aside class="widget widget_text">
-            <h3 class="widget-title">About Me</h3>
-            <div class="textwidget">
-              <img src="../assets/images/site/about-small.jpg" alt="avatar"> <p>Hello. I am a freelance writer. I live in a small town somewhere in the world.</p>
-            </div>
-          </aside>
-          <!-- widget -->
-
-          <!-- widget -->
-          <aside class="widget widget_tag_cloud">
-            <h3 class="widget-title">Tags</h3>
-            <div class="tagcloud"> <a href="#" title="1 topic" style="font-size: 8pt;">adaptive</a> <a href="#" title="2 topics" style="font-size: 22pt;">design</a> <a href="#" title="1 topic" style="font-size: 8pt;">html</a> <a href="#" title="2 topics" style="font-size: 22pt;">responsive</a> <a href="#" title="2 topics" style="font-size: 22pt;">think</a> <a href="#" title="1 topic" style="font-size: 8pt;">web design</a> <a href="#" title="1 topic" style="font-size: 8pt;">css</a> <a href="#" title="2 topics" style="font-size: 22pt;">animations</a> <a href="#" title="1 topic" style="font-size: 8pt;">layout</a> <a href="#" title="2 topics" style="font-size: 14pt;">mobile</a> <a href="#" title="2 topics" style="font-size: 22pt;">think</a> <a href="#" title="1 topic" style="font-size: 8pt;">typography</a> </div>
-          </aside>
-          <!-- widget -->
-
-          <!-- widget : categories -->
-          <aside class="widget widget_categories">
-            <h3 class="widget-title">Categories</h3>
-            <ul>
-              <li class="cat-item"><a href="#" title="View all posts filed under Nature">Nature</a></li>
-              <li class="cat-item"><a href="#" title="View all posts filed under Life">Life</a></li>
-              <li class="cat-item"><a href="#" title="View all posts filed under Adventure">Adventure</a></li>
-              <li class="cat-item"><a href="#" title="View all posts filed under Freebies">Travel</a></li>
-              <li class="cat-item"><a href="#" title="View all posts filed under Sport">Sport</a></li>
-            </ul>
-          </aside>
-          <!-- widget : categories -->
-
-          <!-- widget -->
-          <aside class="widget widget_recent_entries">
-            <h3 class="widget-title">Recent Posts</h3>
-            <ul>
-              <li><a href="#">Runaway A Road Adventure</a></li>
-              <li><a href="#">All In Our Head</a></li>
-              <li><a href="#">Smaller Plate</a></li>
-              <li><a href="#">Alice On The Roof</a></li>
-              <li><a href="#">Becoming A DragonFly</a></li>
-            </ul>
-          </aside>
-          <!-- widget -->
-        </div>
-        <!-- footer-sidebar -->
-      </div>
-      <!-- layout-medium -->
-      <!-- .site-info -->
-      <div class="site-info">
-        <!-- layout-medium -->
-        <div class="layout-medium">
-          <p>crafted with <i class="pw-icon-heart"></i> <em>by</em> Pixelwars</p>
-        </div>
-        <!-- layout-medium -->
-      </div>
-      <!-- .site-info -->
-    </footer>
-    <!-- site-footer -->
+    <Footer/>
   </div>
   <!-- page -->
 </template>
@@ -934,11 +750,15 @@
 // import '../js/responsive-image-gallery/r-gallery.js'
 // import '../js/main.js'
 import carousel from 'vue-owl-carousel'
+import Header from '../layout/Header'
+import Footer from '../layout/Footer'
 export default {
   name: 'IndexPage',
 
   components: {
-    carousel
+    carousel,
+    Header,
+    Footer
   },
 
   data () {
