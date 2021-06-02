@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile-dev
     ports:
       - "80:8080"
-    container_name: vue-ui
+    container_name: blog
     volumes:
       - ./:/usr/src/app
       - /usr/src/app/node_modules
