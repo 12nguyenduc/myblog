@@ -32,159 +32,22 @@
 
               <!-- GALLERY -->
               <div class="r-gallery masonry media-grid" data-layout="masonry" data-item-width="420">
+                <div v-for="(item, index) in albums" v-bind:key="index">
+                  <div class="media-cell hentry">
 
-                <!-- gallery-item -->
-                <div class="media-cell hentry">
-
-                  <div class="media-box">
-                    <img src="https://i.imgur.com/XwubuzF.jpg" alt="gallery-post">
-                    <div class="mask">
-                      <div class="media-cell-desc">
-                        <h3>Outdoor Adventures</h3>
-                        <h4>17 July 2014</h4>
+                    <div class="media-box">
+                      <img :src="item.thumbnail" alt="gallery-post">
+                      <div class="mask">
+                        <div class="media-cell-desc">
+                          <h3>{{item.title}}</h3>
+                          <h4>{{ moment.unix(item.time).format('DD/MM/YYYY') }}</h4>
+                        </div>
                       </div>
+                      <a href="gallery-single.html"></a>
                     </div>
-                    <a href="gallery-single.html"></a>
+
                   </div>
-
                 </div>
-                <!-- gallery-item -->
-
-                <!-- gallery-item -->
-                <div class="media-cell hentry">
-
-                  <div class="media-box">
-                    <img src="https://i.imgur.com/cDmbcJw.jpg" alt="gallery-post">
-                    <div class="mask">
-                      <div class="media-cell-desc">
-                        <h3>Summertime Saddness</h3>
-                        <h4>8 May 2014</h4>
-                      </div>
-                    </div>
-                    <a href="gallery-single.html"></a>
-                  </div>
-
-                </div>
-                <!-- gallery-item -->
-
-                <!-- gallery-item -->
-                <div class="media-cell hentry">
-
-                  <div class="media-box">
-                    <img src="https://i.imgur.com/TYN0Siv.jpg" alt="gallery-post">
-                    <div class="mask">
-                      <div class="media-cell-desc">
-                        <h3>Summertime Saddness</h3>
-                        <h4>22 April 2014</h4>
-                      </div>
-                    </div>
-                    <a href="gallery-single.html"></a>
-                  </div>
-
-                </div>
-                <!-- gallery-item -->
-
-                <!-- gallery-item -->
-                <div class="media-cell hentry">
-
-                  <div class="media-box">
-                    <img src="https://i.imgur.com/Ao8At0K.jpg" alt="gallery-post">
-                    <div class="mask">
-                      <div class="media-cell-desc">
-                        <h3>Summertime Saddness</h3>
-                        <h4>3 May 2014</h4>
-                      </div>
-                    </div>
-                    <a href="gallery-single.html"></a>
-                  </div>
-
-                </div>
-                <!-- gallery-item -->
-
-                <!-- gallery-item -->
-                <div class="media-cell hentry">
-
-                  <div class="media-box">
-                    <img src="https://i.imgur.com/N7RLT4s.jpg" alt="gallery-post">
-                    <div class="mask">
-                      <div class="media-cell-desc">
-                        <h3>Summertime Saddness</h3>
-                        <h4>17 July 2014</h4>
-                      </div>
-                    </div>
-                    <a href="gallery-single.html"></a>
-                  </div>
-
-                </div>
-                <!-- gallery-item -->
-
-                <!-- gallery-item -->
-                <div class="media-cell hentry">
-
-                  <div class="media-box">
-                    <img src="https://i.imgur.com/vqUXf2b.jpg" alt="gallery-post">
-                    <div class="mask">
-                      <div class="media-cell-desc">
-                        <h3>Summertime Saddness</h3>
-                        <h4>17 July 2014</h4>
-                      </div>
-                    </div>
-                    <a href="gallery-single.html"></a>
-                  </div>
-
-                </div>
-                <!-- gallery-item -->
-
-                <!-- gallery-item -->
-                <div class="media-cell hentry">
-
-                  <div class="media-box">
-                    <img src="https://i.imgur.com/vZwpApT.jpg" alt="gallery-post">
-                    <div class="mask">
-                      <div class="media-cell-desc">
-                        <h3>Summertime Saddness</h3>
-                        <h4>17 July 2014</h4>
-                      </div>
-                    </div>
-                    <a href="gallery-single.html"></a>
-                  </div>
-
-                </div>
-                <!-- gallery-item -->
-
-                <!-- gallery-item -->
-                <div class="media-cell hentry">
-
-                  <div class="media-box">
-                    <img src="https://i.imgur.com/X2J7Nxl.jpg" alt="gallery-post">
-                    <div class="mask">
-                      <div class="media-cell-desc">
-                        <h3>Summertime Saddness</h3>
-                        <h4>17 July 2014</h4>
-                      </div>
-                    </div>
-                    <a href="gallery-single.html"></a>
-                  </div>
-
-                </div>
-                <!-- gallery-item -->
-
-                <!-- gallery-item -->
-                <div class="media-cell hentry">
-
-                  <div class="media-box">
-                    <img src="https://i.imgur.com/DyMDJ3f.jpg" alt="gallery-post">
-                    <div class="mask">
-                      <div class="media-cell-desc">
-                        <h3>Summertime Saddness</h3>
-                        <h4>17 July 2014</h4>
-                      </div>
-                    </div>
-                    <a href="gallery-single.html"></a>
-                  </div>
-
-                </div>
-                <!-- gallery-item -->
 
               </div>
               <!-- GALLERY -->
@@ -212,11 +75,19 @@
 <script>
 import Header from '@/layout/Header'
 import Footer from '@/layout/Footer'
+import moment from 'moment'
+import Vue from 'vue'
+Vue.prototype.moment = moment
 export default {
   name: 'gallery',
   components: {
     Header,
     Footer
+  },
+  computed: {
+    albums () {
+      return this.$store.state.album.albums
+    }
   },
   data () {
     return {
@@ -224,6 +95,9 @@ export default {
   },
 
   methods: {
+  },
+  beforeMount () {
+    this.$store.dispatch('album/getAlbums')
   }
 }
 </script>
