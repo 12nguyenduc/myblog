@@ -40,7 +40,7 @@
                       <div class="mask">
                         <div class="media-cell-desc">
                           <h3>{{item.title}}</h3>
-                          <h4>{{ momentUnix(item.time).format('DD/MM/YYYY') }}</h4>
+                          <h4>{{ moment.unix(item.time).format('DD/MM/YYYY') }}</h4>
                         </div>
                       </div>
                       <a href="gallery-single.html"></a>
@@ -75,7 +75,9 @@
 <script>
 import Header from '@/layout/Header'
 import Footer from '@/layout/Footer'
-import moment from 'moment'
+import Vue from 'vue'
+import moment from 'moment-timezone'
+Vue.prototype.moment = moment
 export default {
   name: 'gallery',
   components: {
@@ -93,9 +95,6 @@ export default {
   },
 
   methods: {
-    momentUnix: function (timeTemp) {
-      return moment.unix(timeTemp)
-    }
   },
   beforeMount () {
     this.$store.dispatch('album/getAlbums')

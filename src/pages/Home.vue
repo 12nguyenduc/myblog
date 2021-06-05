@@ -31,7 +31,7 @@
                     <!-- .entry-meta -->
                     <div class="entry-meta">
                                         <span class="entry-date">
-                                            <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">{{momentUnix(item.time).format('DD/MM/YYYY') }}</time>
+                                            <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">{{moment.unix(item.time).format('DD/MM/YYYY') }}</time>
                                         </span>
                       <span class="read-time"><span class="eta"></span> read</span>
                       <span class="cat-links">
@@ -64,7 +64,7 @@
                     <!-- .entry-meta -->
                     <div class="entry-meta">
                                         <span class="entry-date">
-                                        	<time class="entry-date">{{momentUnix(item.time).format('DD/MM/YYYY') }}</time>
+                                        	<time class="entry-date">{{moment.unix(item.time).format('DD/MM/YYYY') }}</time>
                                         </span>
                       <span class="read-time"><span class="eta"></span> read</span>
                       <span class="cat-links">
@@ -106,7 +106,7 @@
                     <!-- .entry-meta -->
                     <div class="entry-meta">
                                         <span class="entry-date">
-                                            <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">{{momentUnix(item.time).format('DD/MM/YYYY') }}</time>
+                                            <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">{{moment.unix(item.time).format('DD/MM/YYYY') }}</time>
                                         </span>
                       <span class="read-time"><span class="eta"></span> read</span>
                       <span class="cat-links">
@@ -139,7 +139,7 @@
                     <!-- .entry-meta -->
                     <div class="entry-meta">
                                         <span class="entry-date">
-                                            <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">{{momentUnix(item.time).format('DD/MM/YYYY') }}</time>
+                                            <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">{{moment.unix(item.time).format('DD/MM/YYYY') }}</time>
                                         </span>
                       <span class="read-time"><span class="eta"></span> read</span>
                       <span class="cat-links">
@@ -193,7 +193,7 @@
 
                     <div class="entry-meta">
                                         <span class="entry-date">
-                                            <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">{{momentUnix(item.time).format('DD/MM/YYYY') }}</time>
+                                            <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">{{moment.unix(item.time).format('DD/MM/YYYY') }}</time>
                                         </span>
                       <span class="read-time"><span class="eta"></span> read</span>
                       <span class="cat-links">
@@ -246,7 +246,9 @@
 <script>
 import Header from '../layout/Header'
 import Footer from '../layout/Footer'
-import moment from 'moment'
+import Vue from 'vue'
+import moment from 'moment-timezone'
+Vue.prototype.moment = moment
 export default {
   name: 'IndexPage',
 
@@ -275,9 +277,6 @@ export default {
   },
 
   methods: {
-    momentUnix: function (timeTemp) {
-      return moment.unix(timeTemp)
-    },
     showToast () {
       console.log('aaa')
       this.$store.commit('toast/NEW', { type: 'success', message: 'hello' })
