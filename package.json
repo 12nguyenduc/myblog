@@ -17,6 +17,7 @@
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.33",
     "qs": "^6.9.4",
+    "react-moment": "^1.1.1",
     "ua-parser-js": "^0.7.21",
     "util": "^0.12.3",
     "vue": "^2.6.11",
