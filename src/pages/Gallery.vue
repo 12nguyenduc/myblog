@@ -75,9 +75,8 @@
 <script>
 import Header from '@/layout/Header'
 import Footer from '@/layout/Footer'
-import moment from 'moment'
 import Vue from 'vue'
-Vue.prototype.moment = moment
+Vue.use(require('vue-moment'))
 export default {
   name: 'gallery',
   components: {
