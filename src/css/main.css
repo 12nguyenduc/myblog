@@ -152,10 +152,10 @@ p {
 	}
 /* blockquote  */
 blockquote {
- 	position: relative; margin: 2em 0; padding: .4em 1.2em; text-align: center; font-size: 1.25em; font-weight: 700; font-style: normal; line-height: 1.5; letter-spacing: -1px;
-	}
+ 	position: relative; margin: 2em 0; padding: .4em 1.2em; text-align: center; font-size: 1.25em; font-weight: 700; font-style: normal; line-height: 1.5;letter-spacing: 2px;
+}
 	blockquote:before {
-		display: block; content: "\e81a"; line-height: 1; font-size: 18px; position: absolute; left: 0; top: -12px;
+		display: block; content: "\e81a"; line-height: 1; font-size: 18px; position: absolute; left: 0; top: -12px; letter-spacing: 2px;
 		}
 	blockquote cite {
 		display: block; font-size: 12px; padding-right: 1em; margin-top: 16px; font-style: normal; font-weight: 400; color: #C5C2B6; text-transform: uppercase; letter-spacing: 2px;

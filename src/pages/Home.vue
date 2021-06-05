@@ -11,123 +11,6 @@
         <!-- site-content -->
         <div id="content" class="site-content" role="main">
 
-          <!-- InstanceBeginEditable name="FeaturedContent" -->
-<!--          <carousel>-->
-<!--            <slide>-->
-<!--              <div class="post-thumbnail" style="background-image:url(https://i.imgur.com/tjmyg1G.jpg)">-->
-
-<!--                &lt;!&ndash; .entry-header &ndash;&gt;-->
-<!--                <header class="entry-header">-->
-
-<!--                  &lt;!&ndash; .entry-meta &ndash;&gt;-->
-<!--                  <div class="entry-meta">-->
-<!--                                    <span class="cat-links">-->
-<!--                                        <a href="#" rel="category tag">TRAVEL</a>-->
-<!--                                    </span>-->
-<!--                  </div>-->
-<!--                  &lt;!&ndash; .entry-meta &ndash;&gt;-->
-
-<!--                  &lt;!&ndash; .entry-title &ndash;&gt;-->
-<!--                  <h1 class="entry-title"><a href="blog-single.html">There's always light at the end of the tunnel</a></h1>-->
-<!--                </header>-->
-<!--                &lt;!&ndash; .entry-header &ndash;&gt;-->
-
-<!--              </div>-->
-
-<!--            </slide>-->
-<!--            <slide>-->
-<!--              <div class="post-thumbnail" style="background-image:url(images/blog/02.jpg)">-->
-
-<!--                &lt;!&ndash; .entry-header &ndash;&gt;-->
-<!--                <header class="entry-header">-->
-
-<!--                  &lt;!&ndash; .entry-meta &ndash;&gt;-->
-<!--                  <div class="entry-meta">-->
-<!--                                    <span class="cat-links">-->
-<!--                                        <a href="#" rel="category tag">Life</a>-->
-<!--                                    </span>-->
-<!--                  </div>-->
-<!--                  &lt;!&ndash; .entry-meta &ndash;&gt;-->
-
-<!--                  &lt;!&ndash; .entry-title &ndash;&gt;-->
-<!--                  <h1 class="entry-title"><a href="blog-single.html">The Life of Stuff</a></h1>-->
-<!--                </header>-->
-<!--                &lt;!&ndash; .entry-header &ndash;&gt;-->
-
-<!--              </div>-->
-<!--            </slide>-->
-<!--            <slide>-->
-<!--              <div class="post-thumbnail" style="background-image:url(images/blog/03.jpg)">-->
-
-<!--                &lt;!&ndash; .entry-header &ndash;&gt;-->
-<!--                <header class="entry-header">-->
-
-<!--                  &lt;!&ndash; .entry-meta &ndash;&gt;-->
-<!--                  <div class="entry-meta">-->
-<!--                                    <span class="cat-links">-->
-<!--                                        <a href="#" rel="category tag">Nature</a>-->
-<!--                                    </span>-->
-<!--                  </div>-->
-<!--                  &lt;!&ndash; .entry-meta &ndash;&gt;-->
-
-<!--                  &lt;!&ndash; .entry-title &ndash;&gt;-->
-<!--                  <h1 class="entry-title"><a href="blog-single.html">Cuckoo Events</a></h1>-->
-<!--                </header>-->
-<!--                &lt;!&ndash; .entry-header &ndash;&gt;-->
-
-<!--              </div>-->
-
-<!--            </slide>-->
-<!--            <slide>-->
-<!--              <div class="post-thumbnail" style="background-image:url(images/blog/04.jpg)">-->
-
-<!--                &lt;!&ndash; .entry-header &ndash;&gt;-->
-<!--                <header class="entry-header">-->
-
-<!--                  &lt;!&ndash; .entry-meta &ndash;&gt;-->
-<!--                  <div class="entry-meta">-->
-<!--                                    <span class="cat-links">-->
-<!--                                        <a href="#" rel="category tag">Life</a>-->
-<!--                                    </span>-->
-<!--                  </div>-->
-<!--                  &lt;!&ndash; .entry-meta &ndash;&gt;-->
-
-<!--                  &lt;!&ndash; .entry-title &ndash;&gt;-->
-<!--                  <h1 class="entry-title"><a href="blog-single.html">Stay Calm And Surf</a></h1>-->
-<!--                </header>-->
-<!--                &lt;!&ndash; .entry-header &ndash;&gt;-->
-
-<!--              </div>-->
-
-<!--            </slide>-->
-<!--            <slide>-->
-<!--              <div class="post-thumbnail" style="background-image:url(images/blog/05.jpg)">-->
-
-<!--                &lt;!&ndash; .entry-header &ndash;&gt;-->
-<!--                <header class="entry-header">-->
-
-<!--                  &lt;!&ndash; .entry-meta &ndash;&gt;-->
-<!--                  <div class="entry-meta">-->
-<!--                                    <span class="cat-links">-->
-<!--                                        <a href="#" rel="category tag">Fashion</a>-->
-<!--                                    </span>-->
-<!--                  </div>-->
-<!--                  &lt;!&ndash; .entry-meta &ndash;&gt;-->
-
-<!--                  &lt;!&ndash; .entry-title &ndash;&gt;-->
-<!--                  <h1 class="entry-title"><a href="blog-single.html">Becoming a Dragonfly</a></h1>-->
-<!--                </header>-->
-<!--                &lt;!&ndash; .entry-header &ndash;&gt;-->
-
-<!--              </div>-->
-<!--            </slide>-->
-<!--          </carousel>-->
-          <!-- post-slider -->
-          <!--<div class="post-slider owl-carousel" data-items="3" data-loop="false" data-center="false" data-mouse-drag="true" data-nav="false" data-dots="false" data-autoplay="true" data-autoplay-speed="600" data-autoplay-timeout="2000">-->
-          <!-- post-slider -->
-
-          <!-- InstanceEndEditable -->
-
           <!-- layout-fixed -->
           <div class="layout-fixed">
 
@@ -136,576 +19,201 @@
             <!-- blog-regular -->
             <div class="blog-regular">
 
-              <!-- .hentry -->
-              <article class="hentry post">
+              <div v-for="(item, index) in articles" v-bind:key="index">
+                <article v-if="item.type === 3" class="hentry post format-audio"  >
 
-                <!-- .entry-header -->
-                <header class="entry-header">
+                  <!-- .entry-header -->
+                  <header class="entry-header">
 
-                  <!-- .entry-title -->
-                  <h1 class="entry-title"><a href="blog-single.html">Runaway A Road Adventure</a></h1>
+                    <!-- .entry-title -->
+                    <h1 class="entry-title"><a href="blog-single.html">{{item.title}}</a></h1>
 
-                  <!-- .entry-meta -->
-                  <div class="entry-meta">
+                    <!-- .entry-meta -->
+                    <div class="entry-meta">
                                         <span class="entry-date">
-                                        	<time class="entry-date" datetime="2014-07-13T04:34:10+00:00">April 13, 2015</time>
+                                            <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">{{moment.unix(item.time).format('DD/MM/YYYY') }}</time>
                                         </span>
-                    <span class="comment-link">
-                                            <a href="blog-single.html#comments">7 Comments</a>
-                                        </span>
-                    <span class="read-time"><span class="eta"></span> read</span>
-                    <span class="cat-links">
-                                            <a href="#" title="View all posts in Travel" rel="category tag">Travel</a>
-                                        </span>
-                    <!--<span class="edit-link">
-                      <a class="post-edit-link" href="#">Edit</a>
-                    </span>-->
-                  </div>
-                  <!-- .entry-meta -->
-
-                </header>
-                <!-- .entry-header -->
-
-                <!-- .featured-image -->
-                <div class="featured-image">
-                  <a href="blog-single.html">
-                    <img src="../assets/images/blog/06.jpg" alt="blog-image">
-                  </a>
-                </div>
-                <!-- .featured-image -->
-
-                <!-- .entry-content -->
-                <div class="entry-content">
-
-                  <p>We circled for some time without doing much damage on either side; the long, straight, needle-like swords flashing in the sunlight, and ringing out upon the stillness as they crashed together with each effective parry.  </p>
-                  <p>I was only partially successful, as a sharp pain in my left shoulder attested, but in the sweep of my glance as I sought to again locate my adversary, a sight met my astonished gaze which paid me well for the wound the temporary blindness had caused me.
-                    <span class="more">
-                                            <a href="blog-single.html" class="more-link">Continue reading <span class="meta-nav">→</span></a>
-                                        </span>
-                  </p>
-
-                </div>
-                <!-- .entry-content -->
-
-              </article>
-              <!-- .hentry -->
-
-              <!-- .hentry -->
-              <article class="hentry post sticky">
-
-                <!-- .entry-header -->
-                <header class="entry-header">
-
-                  <!-- .entry-title -->
-                  <h1 class="entry-title"><a href="blog-single-with-sidebar.html">All In Our Head</a></h1>
-
-                  <!-- .entry-meta -->
-                  <div class="entry-meta">
-                                        <span class="entry-date">
-                                            <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">June 7, 2014</time>
-                                        </span>
-                    <span class="comment-link">
-                                            <a href="blog-single.html#comments">64 Comments</a>
-                                        </span>
-                    <span class="read-time"><span class="eta"></span> read</span>
-                    <span class="cat-links">
-                                            <a href="#" title="View all posts in Adventure" rel="category tag">Adventure</a>
-                                        </span>
-                  </div>
-                  <!-- .entry-meta -->
-
-                </header>
-                <!-- .entry-header -->
-
-                <!-- .featured-image -->
-                <div class="featured-image">
-                  <a href="blog-single.html">
-                    <img src="../assets/images/blog/07.jpg" alt="blog-image">
-                  </a>
-                </div>
-                <!-- .featured-image -->
-
-                <!-- .entry-content -->
-                <div class="entry-content">
-
-                  <p>It's just like the story of the grasshopper and the octopus. All year long, the grasshopper kept burying acorns for winter, while the octopus mooched off his girlfriend and watched TV. Also he got a race car. Is any of this getting through to you? I wish! It's a nickel. Okay, it's 500 dollars, you have no choice of carrier, the battery can't hold the charge and the reception isn't very&hellip;
-                    <span class="more">
-                                            <a href="blog-single-with-sidebar.html" class="more-link">Continue reading <span class="meta-nav">→</span></a>
-                                        </span>
-                  </p>
-
-                </div>
-                <!-- .entry-content -->
-
-              </article>
-              <!-- .hentry -->
-
-              <!-- .hentry -->
-              <article class="hentry post">
-
-                <!-- .entry-header -->
-                <header class="entry-header">
-
-                  <!-- .entry-title -->
-                  <h1 class="entry-title"><a href="blog-single.html">Smaller Plate</a></h1>
-
-                  <!-- .entry-meta -->
-                  <div class="entry-meta">
-                                        <span class="entry-date">
-                                            <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">June 7, 2014</time>
-                                        </span>
-                    <span class="comment-link">
-                                            <a href="blog-single.html#comments">124 Comments</a>
-                                        </span>
-                    <span class="read-time"><span class="eta"></span> read</span>
-                    <span class="cat-links">
-                                            <a href="#" title="View all posts in Adventure" rel="category tag">LIFE</a>
-                                        </span>
-                  </div>
-                  <!-- .entry-meta -->
-
-                </header>
-                <!-- .entry-header -->
-
-                <!-- .featured-image -->
-                <div class="featured-image">
-                  <a href="blog-single.html">
-                    <img src="../assets/images/blog/08.jpg" alt="blog-image">
-                  </a>
-                </div>
-                <!-- .featured-image -->
-
-                <!-- .entry-content -->
-                <div class="entry-content">
-
-                  <p>Oh God, what have I done? All I want is to be a monkey of moderate intelligence who wears a suit&hellip; that's why I'm transferring to business school! Perhaps, but perhaps your civilization is merely the sewer of an even greater society above you!</p>
-
-                  <p>Tell her you just want to talk. It has nothing to do with mating. You're going to do his laundry? They're like sex, except I'm having them! I daresay that Fry has discovered the smelliest object in the known universe!
-
-                    <span class="more">
-                                            <a href="blog-single.html" class="more-link">Continue reading <span class="meta-nav">→</span></a>
-                                        </span>
-                  </p>
-
-                </div>
-                <!-- .entry-content -->
-
-              </article>
-              <!-- .hentry -->
-
-              <!-- .hentry -->
-              <article class="hentry post format-video">
-
-                <!-- .entry-header -->
-                <header class="entry-header">
-
-                  <!-- .entry-title -->
-                  <h1 class="entry-title"><a href="blog-single.html">Scrap Surf</a></h1>
-
-                  <!-- .entry-meta -->
-                  <div class="entry-meta">
-                                        <span class="entry-date">
-                                            <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">June 7, 2014</time>
-                                        </span>
-                    <span class="comment-link">
-                                            <a href="blog-single.html#comments">21 Comments</a>
-                                        </span>
-                    <span class="read-time"><span class="eta"></span> read</span>
-                    <span class="cat-links">
-                                            <a href="#" title="View all posts in Adventure" rel="category tag">Street</a>
-                                        </span>
-                  </div>
-                  <!-- .entry-meta -->
-
-                </header>
-                <!-- .entry-header -->
-
-                <!-- .entry-content -->
-                <div class="entry-content">
-
-                  <iframe src="https://player.vimeo.com/video/50315573?color=AB977A&amp;title=0&amp;byline=0&amp;portrait=0" width="800" height="450"></iframe>
-
-                  <p>You don't know how to do any of those. It's a T. It goes "tuh". Okay, I like a challenge. Son, as your lawyer, I declare y'all are in a 12-piece bucket o' trouble. But I done struck you a deal: Five hours of community service cleanin' up that ol' mess you caused. I feel like I was mauled by Jesus. Tell her you just want to talk. It has nothing to do with mating.
-                  </p>
-
-                </div>
-                <!-- .entry-content -->
-
-              </article>
-              <!-- .hentry -->
-
-              <!-- .hentry -->
-              <article class="hentry post format-audio">
-
-                <!-- .entry-header -->
-                <header class="entry-header">
-
-                  <!-- .entry-title -->
-                  <h1 class="entry-title"><a href="blog-single.html">Alice On The Roof</a></h1>
-
-                  <!-- .entry-meta -->
-                  <div class="entry-meta">
-                                        <span class="entry-date">
-                                            <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">June 7, 2014</time>
-                                        </span>
-                    <span class="comment-link">
-                                            <a href="blog-single.html#comments">98 Comments</a>
-                                        </span>
-                    <span class="read-time"><span class="eta"></span> read</span>
-                    <span class="cat-links">
+                      <span class="read-time"><span class="eta"></span> read</span>
+                      <span class="cat-links">
                                             <a href="#" title="View all posts in Music" rel="category tag">Music</a>,
                                             <a href="#" title="View all posts in Rythm" rel="category tag">Rythm</a>
                                         </span>
+                    </div>
+                    <!-- .entry-meta -->
+
+                  </header>
+                  <!-- .entry-header -->
+                  <!-- .entry-content -->
+                  <div class="entry-content">
+                    <div v-html="item.urlSound"></div>
+                    <p>{{item.content}}</p>
+
                   </div>
-                  <!-- .entry-meta -->
+                  <!-- .entry-content -->
 
-                </header>
-                <!-- .entry-header -->
+                </article>
 
-                <!-- .entry-content -->
-                <div class="entry-content">
+                <article v-if="item.type === 1" class="hentry post">
 
-                  <iframe height="166" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/202812975&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                  <!-- .entry-header -->
+                  <header class="entry-header">
 
-                  <p>I'm sorry, guys. I never meant to hurt you. Just to destroy everything you ever believed in. You don't know how to do any of those. But existing is basically all I do! No, she'll probably make me do it. Meh.
-                  </p>
+                    <!-- .entry-title -->
+                    <h1 class="entry-title"><a href="blog-single.html">{{ item.title }}</a></h1>
 
-                </div>
-                <!-- .entry-content -->
-
-              </article>
-              <!-- .hentry -->
-
-              <!-- .hentry -->
-              <article class="hentry post format-gallery">
-
-                <!-- .entry-header -->
-                <header class="entry-header">
-
-                  <!-- .entry-title -->
-                  <h1 class="entry-title"><a href="blog-single.html">Well It's The Time</a></h1>
-
-                  <!-- .entry-meta -->
-                  <div class="entry-meta">
+                    <!-- .entry-meta -->
+                    <div class="entry-meta">
                                         <span class="entry-date">
-                                            <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">June 7, 2014</time>
+                                        	<time class="entry-date">{{moment.unix(item.time).format('DD/MM/YYYY') }}</time>
                                         </span>
-                    <span class="comment-link">
-                                            <a href="blog-single.html#comments">34 Comments</a>
+                      <span class="read-time"><span class="eta"></span> read</span>
+                      <span class="cat-links">
+                                            <a href="#" title="View all posts in Travel" rel="category tag">{{item.tag.join() }}</a>
                                         </span>
-                    <span class="read-time"><span class="eta"></span> read</span>
-                    <span class="cat-links">
+                      <!--<span class="edit-link">
+                        <a class="post-edit-link" href="#">Edit</a>
+                      </span>-->
+                    </div>
+                    <!-- .entry-meta -->
+
+                  </header>
+                  <!-- .entry-header -->
+
+                  <!-- .featured-image -->
+                  <div class="featured-image" v-if="item.cover!==''">
+                    <a href="blog-single.html">
+                      <img :src="item.cover" alt="blog-image">
+                    </a>
+                  </div>
+                  <!-- .featured-image -->
+
+                  <!-- .entry-content -->
+                  <div class="entry-content">
+                    <p>{{item.content}}</p>
+                  </div>
+                  <!-- .entry-content -->
+
+                </article>
+
+                <article v-if="item.type === 4" class="hentry post format-video">
+
+                  <!-- .entry-header -->
+                  <header class="entry-header">
+
+                    <!-- .entry-title -->
+                    <h1 class="entry-title"><a href="blog-single.html">{{item.title}}</a></h1>
+
+                    <!-- .entry-meta -->
+                    <div class="entry-meta">
+                                        <span class="entry-date">
+                                            <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">{{moment.unix(item.time).format('DD/MM/YYYY') }}</time>
+                                        </span>
+                      <span class="read-time"><span class="eta"></span> read</span>
+                      <span class="cat-links">
+                                            <a href="#" title="View all posts in Adventure" rel="category tag">Street</a>
+                                        </span>
+                    </div>
+                    <!-- .entry-meta -->
+
+                  </header>
+                  <!-- .entry-header -->
+
+                  <!-- .entry-content -->
+                  <div class="entry-content">
+
+                    <div v-html="item.urlYoutube"></div>
+                    <p>{{item.content}}</p>
+                  </div>
+                  <!-- .entry-content -->
+
+                </article>
+
+                <article v-if="item.type === 2" class="hentry post format-gallery">
+
+                  <!-- .entry-header -->
+                  <header class="entry-header">
+
+                    <!-- .entry-title -->
+                    <h1 class="entry-title"><a href="blog-single.html">{{item.title}}</a></h1>
+
+                    <!-- .entry-meta -->
+                    <div class="entry-meta">
+                                        <span class="entry-date">
+                                            <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">{{moment.unix(item.time).format('DD/MM/YYYY') }}</time>
+                                        </span>
+                      <span class="read-time"><span class="eta"></span> read</span>
+                      <span class="cat-links">
                                             <a href="#" title="View all posts in Life" rel="category tag">Life</a>
                                         </span>
+                    </div>
+                    <!-- .entry-meta -->
+
+                  </header>
+                  <!-- .entry-header -->
+
+                  <!-- .entry-content -->
+                  <div  class="entry-content">
+
+                    <!-- .gallery -->
+                    <div v-for="(image, index) in item.images.map((_,i)=>i).filter(i=>(i+1)%3===0)" v-bind:key="index">
+
+                      <div class="gallery gallery-columns-3 gallery-size-thumbnail">
+                        <figure class="gallery-item">
+                          <div class="gallery-icon landscape">
+                            <img width="150" height="150" :src="item.images[image-2]" class="attachment-thumbnail" alt="Golden Gate Bridge">
+                          </div>
+                        </figure>
+                        <figure class="gallery-item">
+                          <div class="gallery-icon landscape">
+                            <img width="150" height="150" :src="item.images[image-1]" class="attachment-thumbnail" alt="Golden Gate Bridge">
+                          </div>
+                        </figure>
+                        <figure class="gallery-item">
+                          <div class="gallery-icon landscape">
+                            <img width="150" height="150" :src="item.images[image]" class="attachment-thumbnail" alt="Golden Gate Bridge">
+                          </div>
+                        </figure>
+                      </div>
+                    </div>
+
+                    <!-- .gallery -->
+
+                    <p>{{item.content}}</p>
+
                   </div>
-                  <!-- .entry-meta -->
+                  <!-- .entry-content -->
 
-                </header>
-                <!-- .entry-header -->
+                </article>
 
-                <!-- .entry-content -->
-                <div class="entry-content">
+                <article v-if="item.type === 5" class="hentry post format-quote">
 
-                  <!-- .owl-carousel -->
-                  <div class="owl-carousel" data-items="1" data-loop="false" data-center="false" data-mouse-drag="true" data-nav="true" data-dots="true" data-autoplay="false" data-autoplay-speed="600" data-autoplay-timeout="2000" data-nav-prev-text="prev" data-nav-next-text="next">
+                  <header class="entry-header">
 
-                    <div>
-                      <img src="../assets/images/blog/slide-01.jpg" alt="slide">
-                    </div>
+                    <h1 class="entry-title"><a href="blog-single.html">{{item.title}}</a></h1>
 
-                    <div>
-                      <img src="../assets/images/blog/slide-02.jpg" alt="slide">
-                    </div>
-
-                    <div>
-                      <img src="../assets/images/blog/slide-03.jpg" alt="slide">
-                      <p class="owl-title">memories last forever.</p>
-                    </div>
-
-                  </div>
-                  <!-- .owl-carousel -->
-
-                  <p>I wish! It's a nickel. I'm sorry, guys. I never meant to hurt you. Just to destroy everything you ever believed in. Oh, but you can. But you may have to metaphorically make a deal with the devil. And by "devil", I mean Robot Devil. And by "metaphorically", I mean get your coat. Also Zoidberg.
-                  </p>
-
-                </div>
-                <!-- .entry-content -->
-
-              </article>
-              <!-- .hentry -->
-
-              <!-- .hentry -->
-              <article class="hentry post format-gallery">
-
-                <!-- .entry-header -->
-                <header class="entry-header">
-
-                  <!-- .entry-title -->
-                  <h1 class="entry-title"><a href="blog-single.html">Finding Perfect Spot For Surfing</a></h1>
-
-                  <!-- .entry-meta -->
-                  <div class="entry-meta">
+                    <div class="entry-meta">
                                         <span class="entry-date">
-                                            <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">June 7, 2014</time>
+                                            <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">{{moment.unix(item.time).format('DD/MM/YYYY') }}</time>
                                         </span>
-                    <span class="comment-link">
-                                            <a href="blog-single.html#comments">83 Comments</a>
-                                        </span>
-                    <span class="read-time"><span class="eta"></span> read</span>
-                    <span class="cat-links">
-                                            <a href="#" title="View all posts in Life" rel="category tag">Life</a>
-                                        </span>
-                  </div>
-                  <!-- .entry-meta -->
-
-                </header>
-                <!-- .entry-header -->
-
-                <!-- .entry-content -->
-                <div class="entry-content">
-
-                  <!-- .gallery -->
-                  <div class="gallery gallery-columns-3 gallery-size-thumbnail">
-
-                    <figure class="gallery-item">
-                      <div class="gallery-icon landscape">
-                        <a href="images/blog/slide-01-big.jpg"><img width="150" height="150" src="../assets/images/blog/slide-01.jpg" class="attachment-thumbnail" alt="Golden Gate Bridge"></a>
-                      </div>
-                    </figure>
-
-                    <figure class="gallery-item">
-                      <div class="gallery-icon landscape">
-                        <a href="images/blog/slide-02-big.jpg"><img width="150" height="150" src="../assets/images/blog/slide-02.jpg" class="attachment-thumbnail" alt="Golden Gate Bridge"></a>
-                      </div>
-                    </figure>
-
-                    <figure class="gallery-item">
-                      <div class="gallery-icon landscape">
-                        <a href="images/blog/slide-03-big.jpg"><img width="150" height="150" src="../assets/images/blog/slide-03.jpg" class="attachment-thumbnail" alt="Golden Gate Bridge"></a>
-                      </div>
-                      <figcaption class="wp-caption-text gallery-caption">
-                        Surfing Spot
-                      </figcaption>
-                    </figure>
-
-                  </div>
-                  <!-- .gallery -->
-
-                  <p>It may comfort you to know that Fry's death took only fifteen seconds, yet the pain was so intense, that it felt to him like fifteen years.</p>
-
-                </div>
-                <!-- .entry-content -->
-
-              </article>
-              <!-- .hentry -->
-
-              <!-- .hentry -->
-              <!--<article class="hentry post format-image">
-
-                  <header class="entry-header">
-
-                      <h1 class="entry-title"><a href="blog-single.html" title="Adaptive Vs. Responsive Layouts And Optimal Text Readability">This is an image post!</a></h1>
-
-                      <div class="entry-meta">
-                          <span class="entry-date">
-                              <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">June 7, 2014</time>
-                          </span>
-                          <span class="comment-link">
-                              <a href="blog-single.html#comments">83 Comments</a>
-                          </span>
-                          <span class="read-time"><span class="eta"></span> read</span>
-                          <span class="cat-links">
-                              <a href="#" title="View all posts in Adventure" rel="category tag">Street</a>
-                          </span>
-                      </div>
-
-                  </header>
-
-                  <div class="entry-content">
-
-                      <p>
-                        <img src="../assets/images/blog/slide-03.jpg" alt="image">
-                      </p>
-
-                      <p>This is a text of an image post format.</a></p>
-
-                  </div>
-
-              </article>-->
-              <!-- .hentry -->
-
-              <!-- .hentry -->
-              <!--<article class="hentry post format-link">
-
-                  <header class="entry-header">
-
-                      <h1 class="entry-title"><a href="blog-single-audio-embed.html" title="Link">Format Link</a></h1>
-
-                      <div class="entry-meta">
-                          <span class="entry-date">
-                              <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">June 7, 2014</time>
-                          </span>
-                          <span class="comment-link">
-                              <a href="blog-single.html#comments">83 Comments</a>
-                          </span>
-                          <span class="read-time"><span class="eta"></span> read</span>
-                          <span class="cat-links">
-                              <a href="#" title="View all posts in Music" rel="category tag">Music</a>
-                          </span>
-                      </div>
-
-                  </header>
-
-                  <div class="entry-content">
-                      <p>
-                          <a title="smashing magazine" href="http://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a>
-                      </p>
-                      <p>You should definetly visit this site, lots of useful stuff for web designers!</p>
-                  </div>
-
-              </article>-->
-
-              <!-- .hentry -->
-              <!--<article class="hentry post format-chat">
-
-                  <header class="entry-header">
-
-                      <h1 class="entry-title"><a href="blog-single-audio-embed.html" title="Chat">Just A Little Chat</a></h1>
-
-                      <div class="entry-meta">
-                          <span class="entry-date">
-                              <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">June 7, 2014</time>
-                          </span>
-                          <span class="comment-link">
-                              <a href="blog-single.html#comments">83 Comments</a>
-                          </span>
-                          <span class="read-time"><span class="eta"></span> read</span>
-                          <span class="cat-links">
-                              <a href="#" title="View all posts in Music" rel="category tag">Music</a>
-                          </span>
-                      </div>
-
-                  </header>
-
-                  <div class="entry-content">
-
-                      <div class="chat-transcript">
-
-                          <div class="chat-row chat-speaker-1">
-                              <div class="chat-author"><cite class="fn">John</cite></div>
-                              <div class="chat-text"><p>Hey there</p></div>
-                          </div>
-
-                          <div class="chat-row chat-speaker-2">
-                              <div class="chat-author"><cite class="fn">Mary</cite></div>
-                              <div class="chat-text"><p>Aye, matey!</p></div>
-                          </div>
-
-                          <div class="chat-row chat-speaker-1">
-                              <div class="chat-author"><cite class="fn">John</cite></div>
-                              <div class="chat-text"><p>Huh?</p></div>
-                          </div>
-
-                      </div>
-
-                  </div>
-
-              </article>-->
-
-              <!-- .hentry -->
-              <!--<article class="hentry post format-status">
-
-                  <header class="entry-header">
-
-                      <h1 class="entry-title"><a href="blog-single-audio-embed.html" title="Chat">Status Post</a></h1>
-
-                      <div class="entry-meta">
-                          <span class="entry-date">
-                              <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">June 7, 2014</time>
-                          </span>
-                          <span class="comment-link">
-                              <a href="blog-single.html#comments">83 Comments</a>
-                          </span>
-                          <span class="read-time"><span class="eta"></span> read</span>
-                          <span class="cat-links">
-                              <a href="#" title="View all posts in Music" rel="category tag">Music</a>
-                          </span>
-                      </div>
-
-                  </header>
-
-                  <div class="entry-content">
-
-                      <p>I am having good time with my friends at Starbucks, classic!</p>
-
-                  </div>
-
-              </article>-->
-
-              <!-- .hentry -->
-              <!--<article class="hentry post format-aside">
-
-                  <header class="entry-header">
-
-                      <h1 class="entry-title"><a href="blog-single-audio-embed.html" title="Chat">Aside Post Format</a></h1>
-
-                      <div class="entry-meta">
-                          <span class="entry-date">
-                              <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">June 7, 2014</time>
-                          </span>
-                          <span class="comment-link">
-                              <a href="blog-single.html#comments">83 Comments</a>
-                          </span>
-                          <span class="read-time"><span class="eta"></span> read</span>
-                          <span class="cat-links">
-                              <a href="#" title="View all posts in Music" rel="category tag">Music</a>
-                          </span>
-                      </div>
-
-                  </header>
-
-                  <div class="entry-content">
-
-                      <h4>A Story About Nothing</h4>
-                      <p>Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of things.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.
-                      </p>
-
-                  </div>
-
-              </article>-->
-
-              <!-- .hentry -->
-              <article class="hentry post format-quote">
-
-                <header class="entry-header">
-
-                  <h1 class="entry-title"><a href="blog-single.html">Post Format Quote</a></h1>
-
-                  <div class="entry-meta">
-                                        <span class="entry-date">
-                                            <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">June 7, 2014</time>
-                                        </span>
-                    <span class="comment-link">
-                                            124 Comments
-                                        </span>
-                    <span class="read-time"><span class="eta"></span> read</span>
-                    <span class="cat-links">
+                      <span class="read-time"><span class="eta"></span> read</span>
+                      <span class="cat-links">
                                             <a href="#" title="View all posts in Quote" rel="category tag">Quote</a>
                                         </span>
+                    </div>
+
+                  </header>
+
+                  <div class="entry-content">
+
+                    <blockquote>{{item.content}}
+                      <cite>{{item.author}}</cite>
+                    </blockquote>
+
                   </div>
 
-                </header>
+                </article>
 
-                <div class="entry-content">
-
-                  <blockquote>A problem is a chance for you to do your best.
-                    <cite>Duke Ellington</cite>
-                  </blockquote>
-
-                </div>
-
-              </article>
-              <!-- .hentry -->
+              </div>
 
               <!-- post nav -->
               <nav class="navigation" role="navigation">
@@ -736,22 +244,11 @@
 </template>
 
 <script>
-// import '../js/fastclick.js'
-// import '../js/jquery.fitvids.js'
-// import '../js/jquery.validate.min.js'
-// import '../js/jquery.uniform/jquery.uniform.min.js'
-// import '../js/imagesloaded.pkgd.min.js'
-// import '../js/jquery.isotope.min.js'
-// import '../js/jquery.magnific-popup/jquery.magnific-popup.min.js'
-// import '../js/jquery.fluidbox/jquery.fluidbox.min.js'
-// import '../js/owl-carousel/owl.carousel.min.js'
-// import '../js/readingTime.js'
-// import '../js/selection-sharer/selection-sharer.js'
-// import '../js/responsive-image-gallery/r-gallery.js'
-// import '../js/main.js'
-// import carousel from 'vue-owl-carousel'
 import Header from '../layout/Header'
 import Footer from '../layout/Footer'
+import moment from 'moment'
+import Vue from 'vue'
+Vue.prototype.moment = moment
 export default {
   name: 'IndexPage',
 
@@ -760,7 +257,11 @@ export default {
     Header,
     Footer
   },
-
+  computed: {
+    articles () {
+      return this.$store.state.article.articles
+    }
+  },
   data () {
     return {
       msg: 'Welcome to Index!!!',
@@ -797,6 +298,9 @@ export default {
     onClickIcon () {
       console.log('onClickIcon!!!!')
     }
+  },
+  beforeMount () {
+    this.$store.dispatch('article/getArticles')
   }
 }
 </script>
