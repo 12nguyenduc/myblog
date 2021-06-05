@@ -246,7 +246,7 @@
 <script>
 import Header from '../layout/Header'
 import Footer from '../layout/Footer'
-import moment from 'moment/moment'
+import moment from 'moment'
 export default {
   name: 'IndexPage',
 
