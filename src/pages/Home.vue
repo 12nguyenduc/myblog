@@ -246,7 +246,7 @@
 <script>
 import Header from '../layout/Header'
 import Footer from '../layout/Footer'
-var moment = require('moment')
+const moment = require('moment')
 export default {
   name: 'IndexPage',
 

@@ -12,7 +12,6 @@ import './scss/style.scss'
 import './assets/fonts/bebasneue.css'
 
 Vue.config.productionTip = false
-
 new Vue({
   name: 'Root',
   router,
