@@ -3,10 +3,7 @@ services:
   blog:
     build:
       context: ./
-      dockerfile: Dockerfile-dev
+      dockerfile: Dockerfile
     ports:
-      - "80:8080"
+      - "80:5000"
     container_name: myblog
-    volumes:
-      - ./:/usr/src/app
-      - /usr/src/app/node_modules
